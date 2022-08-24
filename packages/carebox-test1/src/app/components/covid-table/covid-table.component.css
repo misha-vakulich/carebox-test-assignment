@@ -1,0 +1,4 @@
+:host ::ng-deep .carebox-covid-item {
+  float: left;
+  margin: 8px;
+}

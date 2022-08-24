@@ -1,0 +1,19 @@
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.menu-spacer {
+  margin-left: 24px;
+}
+
+.content {
+  margin-top: 64px;
+}
+
+a[mat-button] {
+  color: white;
+  padding: 0 8px;
+  text-decoration: none;
+}

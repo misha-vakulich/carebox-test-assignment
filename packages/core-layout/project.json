@@ -1,0 +1,45 @@
+{
+  "projectType": "library",
+  "sourceRoot": "packages/core-layout/src",
+  "prefix": "carebox",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": [
+        "dist/packages/core-layout"
+      ],
+      "options": {
+        "project": "packages/core-layout/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/core-layout/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/core-layout/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/packages/core-layout"
+      ],
+      "options": {
+        "jestConfig": "packages/core-layout/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "packages/core-layout/**/*.ts",
+          "packages/core-layout/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

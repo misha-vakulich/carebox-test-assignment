@@ -1,0 +1,15 @@
+<ng-container *ngTemplateOutlet="covid; context:{data :covidData$ | async}"></ng-container>
+
+<ng-template #covid let-data="data">
+  <div *ngIf="data">
+   Covid By State Info
+   <br>-------
+   <div *ngFor="let stateItem of data.casesByState">
+      <ng-container *ngTemplateOutlet="item ? item.templateRef : defaultCovidItem; context: {$implicit: stateItem}"></ng-container>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #defaultCovidItem let-item>
+  <carebox-covid-daily-item [item]="item"> </carebox-covid-daily-item>
+</ng-template>

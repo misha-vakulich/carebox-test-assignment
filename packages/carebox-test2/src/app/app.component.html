@@ -1,0 +1,14 @@
+ <mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <h1>Carebox Test 2</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/'"> Covid Data </a>
+      <a mat-button [routerLink]="'/about'"> About </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+ 
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
